@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  TodoList App
+</mat-toolbar>
+<div class="todo-container">
+<mat-form-field appearance="outline">
+<input  matInput [(ngModel)]="newTodo" placeholder="Add new todo">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addTodo()">ADD TODO</button>
+</div>
+<div>
+    <button mat-button (click)="setFilter('all')">All</button>
+    <button  mat-button (click)="setFilter('active')">Active</button>
+    <button mat-button (click)="setFilter('completed')">Completed</button>
+    
+</div>
+
+<!-- List -->
+
+<ul>
+    <li *ngFor="let todo of filteredTodosList">
+        <mat-checkbox  [(ngModel)]="todo.completed" (change)="toogleCompletion()">
+            
+        </mat-checkbox>
+
+        {{todo.title}}
+
+        <button mat-button (click)="removeTodo(todo.id)">Delete</button>
+
+    </li>
+</ul>
+
+
