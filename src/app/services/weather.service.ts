@@ -18,7 +18,7 @@ export class WeatherService {
     .set('key',this.API_KEY)
     .set('q',city)
 
-    return this.http.get(`${this.url}/current.json${this.API_KEY}`,{params});
+    return this.http.get(`${this.url}/current.json`,{params});
 
   }
 }
