@@ -21,6 +21,9 @@ export class AppComponent {
   errorMsg ='';
   loading: boolean= false;
 
+  temp ='';
+  condition_text = '';
+
   constructor(private weatherApi:WeatherService){}
 
   fetchWeather(){
@@ -31,6 +34,7 @@ export class AppComponent {
     this.weatherApi.getCurrentWeather(this.city).subscribe({
       next: (data) => {
         this.weatherData = data;
+        this.getCurrentData();
         this.loading = false;
 
       },
@@ -39,5 +43,11 @@ export class AppComponent {
         this.loading = true;
       }
     });
+  }
+
+  getCurrentData(){
+    const current = this.weatherData.current;
+     this.temp = current.temp_c;
+     this.condition_text = current.condition.text;
   }
 }
