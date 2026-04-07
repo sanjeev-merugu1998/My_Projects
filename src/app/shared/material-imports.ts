@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 export const MATERIAL_MODULES = [
     MatToolbarModule,
@@ -15,6 +16,6 @@ export const MATERIAL_MODULES = [
     MatInputModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatDividerModule
-
+    MatDividerModule,
+    MatProgressSpinnerModule
 ]
