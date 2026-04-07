@@ -1,0 +1,33 @@
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    gap: 20px;
+
+}
+
+.search-btn {
+  height: 56px;
+  margin-top: 0;
+}
+
+.detail-item {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.detail-item strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.detail-item span {
+  color: #1976d2;
+  font-size: 16px;
+  font-weight: 500;
+}
