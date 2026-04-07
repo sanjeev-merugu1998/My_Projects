@@ -10,5 +10,5 @@ import { MATERIAL_MODULES } from './shared/material-imports';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Weather_app';
+  title = 'Expense_tracker';
 }
