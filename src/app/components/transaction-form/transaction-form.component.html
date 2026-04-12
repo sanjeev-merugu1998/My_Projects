@@ -1,1 +1,25 @@
-<p>transaction-form works!</p>
+<form [formGroup]="transactForm" (ngSubmit)="onSubmit()">
+    <select formControlName="type">
+        <option value="Income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <input type="number" formControlName="amount" placeholder="Amount">
+    <div *ngIf="amount?.invalid && amount?.touched">
+    Amount must be greater than 0
+</div>
+    <input type="text" formControlName="category" placeholder="Category">
+    <div *ngIf="category?.invalid && category?.touched">
+        Category is required
+    </div>
+    <input type="date" formControlName="date" placeholder="date">
+    <div *ngIf="date?.invalid && date?.touched">
+        Date is required
+    </div>
+    <input type="text" formControlName="note" placeholder="Note">
+
+    <button type="submit">Add Transaction</button>
+    
+</form>
+
+
