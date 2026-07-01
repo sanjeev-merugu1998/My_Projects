@@ -1,1 +1,18 @@
-<p>filter works!</p>
+<form [formGroup]="filterForm">
+    <select formControlName="type" (change)="applyFilter()">
+        <option value="">All Types</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <select formControl="category" (change)="applyFilter()">
+        <option value="">All categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select>
+
+    <input type="date" formControlName="startDate" (change)="applyFilter()">
+    <input type="date" formControlName="endDate" (change)="applyFilter()">
+
+    <button type="button" (click)="resetFilter()">Reset</button>
+
+</form>
