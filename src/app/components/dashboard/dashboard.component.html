@@ -1,3 +1,5 @@
 <div>Total Income: {{ totalIncome | currency:'INR'}}</div>
 <div>Total Expense: {{totalExpense | currency:'INR'}}</div>
 <div>Balance {{balance | currency: 'INR'}}</div>
+
+<app-charts  [totalIncome] ="totalIncome" [totalExpense]="totalExpense"></app-charts>
